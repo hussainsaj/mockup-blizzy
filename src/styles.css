@@ -1,0 +1,186 @@
+body {
+    font-family: "Helvetica",arial,sans-serif;
+    margin: 0 auto 0 auto;
+    padding:0;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    font-size: 25px;
+}
+
+.sub-header {
+    font-size: 18px;
+}
+
+.subtitle {
+    font-size: 12px;
+}
+
+.greyed {
+    opacity: 0.6;
+    margin: 5px 0;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidemenu {
+    overflow: hidden;
+    height: 0;
+    background-color: #777;
+    color: white
+}
+
+.sidemenu li {
+    text-align: center;
+    padding: 15px;
+}
+
+li a {
+    color: white;
+}
+
+nav {
+    position: relative;
+    height: 80px;
+    margin: 20px;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo .header {
+    letter-spacing: 25px;
+    font-weight: bold;
+}
+
+.menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content {
+    width: 90%;
+    padding: 0 5% 10% 5%;
+}
+
+.content picture img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.partners picture img {
+    height: 150px;
+}
+
+.bio .content-text {
+    width: 80%;
+    padding: 10% 10%;
+    line-height: 150%;
+}
+
+.content .header {
+    padding: 0 0 20px;
+}
+
+.events, .video {
+    padding: 0 0 30px;
+}
+
+.events picture img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.contact-card {
+    border: rgba(0, 0, 0, 0.4) 1px;
+    border-style: solid none;
+    padding: 50px 0 200px;
+    text-align: center;
+}
+
+.contact-card .sub-header {
+    letter-spacing: 7px;
+    margin: 0 0 18px;
+    padding: 10px 0;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo {
+    max-width: 47%;
+    margin: 1%;
+}
+
+/*.cover {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.cover-img, .content, .shortcuts {
+    position: absolute;
+}
+
+.cover-img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}*/
+
+.cover {
+    left: 0;
+    right: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.cover-img, .cover-content, .shortcuts {
+    position: absolute;
+    z-index: 3;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.cover-img {
+    left: 0;
+    right: 0;
+}
+
+.cover-content {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

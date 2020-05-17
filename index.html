@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Blizzy">
+        <meta name="keywords" content="Drummer, music, performance">
+        <meta name="author" content="Hussain Sajid">
+		<title>BLIZZY</title>
+        <link rel="stylesheet" href="src/styles.css">
+    </head>
+    
+	<body>
+        <div class='cover content'>
+            <picture><img src='./media/cover-1.jpg' class='cover-img' alt='blizzy performance background image'></picture>
+            <div class='cover-content'>
+                <p class='header'>BLIZZY</p>
+                <p class='sub-header'>#FRESHESTDRUMMERALIVE</p>
+                <a onclick='changeContent("videos")' class='button'>ENTER</a>
+            </div>
+            <div class='shortcuts'>
+                <a href='#'><i class="fab fa-instagram-square"></i></a>
+                <a href='#'><i class="fab fa-youtube-square"></i></a>
+                <a href='#'><i class="fab fa-snapchat-square"></i></a>
+                <a href='#'><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+
+        <div class='sidemenu'>
+            <ul>
+                <li><a onclick='changeContent("cover")'>Home</a></li>
+                <li><a onclick='changeContent("videos")'>Videos</a></li>
+                <li><a href='#'>Shop</a></li>
+                <li><a onclick='changeContent("tour")'>Tour</a></li>
+                <li><a onclick='changeContent("photos")'>Photos</a></li>
+                <li><a onclick='changeContent("partners")'>Partners</a></li>
+                <li><a onclick='changeContent("bio")'>Bio</a></li>
+                <li><a onclick='changeContent("contact")'>Contact</a></li>
+            </ul>
+        </div>
+
+        <nav>
+            <div class='logo'>
+                <a onclick='changeContent("cover")'>
+                    <p class='header'>BLIZZY</p>
+                    <p class='subtitle greyed'>#FRESHESTDRUMMERALIVE</p>
+                </a>
+            </div>
+            <div class='menu-button'>
+                <a class='greyed' onclick='toggleNav()'>MENU</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class='videos content hidden'>
+                <p class='header videos-header'>LIVE PERFORMANCES</p>
+            </div>
+            <div class='tour content hidden'>
+                <p class='header tour-header'>UPCOMING SHOWS</p>
+                <div class='events'>
+                    <p class='greyed'>Loading...</p>
+                </div>
+            </div>
+            <div class='photos content hidden'>
+                <picture><img src='./media/cover-1.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-2.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-3.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-4.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-5.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-6.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-7.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-8.jpg' class='photo' alt='blizzy performance background image'></picture>
+                <picture><img src='./media/cover-9.jpg' class='photo' alt='blizzy performance background image'></picture>
+            </div>
+            <div class='partners content hidden'>
+                <a href='#'><picture><img src='./media/partner-the-loyalty-club.png' alt='Blizzy portrait'></picture></a>
+                <a href='#'><picture><img src='./media/partner-vic-firth-drumsticks.png' alt='Blizzy portrait'></picture></a>
+                <a href='#'><picture><img src='./media/partner-protection-racket.png' alt='Blizzy portrait'></picture></a>
+                <a href='#'><picture><img src='./media/partner-jlab.png' alt='Blizzy portrait'></picture></a>
+                <a href='#'><picture><img src='./media/partner-zildjian-cymbals.png' alt='Blizzy portrait'></picture></a>
+            </div>
+            <div class='bio content hidden'>
+                <picture><img src='./media/portrait.jpeg' alt='Blizzy portrait'></picture>
+                <div class='content-text'>
+                    <p class='header'>BIO</p>
+                    <p class='greyed'>BLAKE “BLIZZY” ROBINSON IS A WORLD PROFOUND SELF TAUGHT DRUMMER WHO TOURS THE NATION WITH RAPPER, SONGWRITER AND PRODUCER G-EAZY. BLIZZY REGULARLY ATTRACTS MEDIA EXPOSURE HERE IN THE U.S. AND ABROAD DUE TO HIS RAPID GROWTH IN THE MUSIC INDUSTRY. HE HAS PERFORMED ON TALK SHOWS SUCH AS, JIMMY KIMMEL LIVE, LATE NIGHT WITH SETH MEYERS AND JIMMY FALLON JUST TO NAME A FEW. HE CONTINUES TO TAKE THE INDUSTRY BY STORM WITH THE LATEST FASHION AND WAS FEATURED IN XXL MAGAZINE AS ONE OF THE “12 MOST STYLIST PEOPLE AT AGENDA NYC” 2015. WITH A LARGE SOCIAL MEDIA FOLLOWING, HE’S ABLE TO MAINTAIN AND ATTRACT NEW FOLLOWERS DUE TO HIS CLOTHING LINE (THE LOYALTY CLUB) IN ADDITION TO HIS RELATIONSHIP WITH INFLUENTIAL ARTISTS IN THE MUSIC INDUSTRY. BLIZZY'S PASSION FOR DRUMMING BEGAN IN HIS FATHERS’ CHURCH WHERE HE ROUTINELY RETURNS AND HOLDS LESSONS FOR THE YOUNGER GENERATION COMING UP BEHIND HIM...</p>
+                </div>
+            </div>
+            <div class='contact content hidden'>
+                <div class='contact-card'>
+                    <p class='sub-header'>BOOKING</p>
+                    <p class='greyed'>jerry@theloyaltyclub.us</p>
+                    <p class='greyed'>225-428-6691</p>
+                </div>
+            </div>
+        </main>
+        <script src="https://kit.fontawesome.com/f06b4967fa.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type='text/javascript' src='src/config.js'></script>
+        <script type='text/javascript' src="src/scripts.js"></script>
+	</body>
+</html>
