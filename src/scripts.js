@@ -19,6 +19,7 @@ const toggleNav = () => {
 
 const changeContent = (toShow) => {
     const content = document.getElementsByClassName('content')
+    document.getElementsByClassName('cover')[0].style.display = 'none'
     for (let i=0; i<content.length; i++) {
         content[i].style.display = 'none'
     }
