@@ -42,7 +42,7 @@ const formatDateTime = (dateTime) => {
 
 const getEventDates = () => {
     const apiKey = apiKeys.ticketmaster
-    const apiKeyword = 'Halsey' //G-Eazy
+    const apiKeyword = 'G-Eazy'
     
     let html = ``
 
