@@ -31,6 +31,7 @@ p {
 
 ul {
     padding: 0;
+    list-style-type: none;
 }
 
 a {
@@ -38,33 +39,8 @@ a {
     color: black;
 }
 
-.sidemenu {
-    overflow: hidden;
-    height: 0;
-    background-color: #777;
-    color: white
-}
-
-.sidemenu li {
-    text-align: center;
-    padding: 15px;
-}
-
-li a {
-    color: white;
-}
-
-nav {
-    position: relative;
-    height: 80px;
-    margin: 20px;
-    z-index: 1;
-}
-
-.logo {
-    position: absolute;
-    top: 0;
-    left: 0;
+.cover-content .button, .close-button, .sidemenu ul li {
+    cursor: pointer;
 }
 
 .logo .header {
@@ -239,6 +215,131 @@ nav {
 .image-full-view a {
     color: white;
     font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        position: relative;
+        height: 80px;
+        margin: 20px;
+        z-index: 1;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .sidemenu {
+        overflow: hidden;
+        height: 0;
+        background-color: #777;
+        color: white
+    }
+
+    .sidemenu li {
+        text-align: center;
+        padding: 15px;
+    }
+
+    li a {
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .navigation, main {
+        padding-top: 40px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .navigation {
+        width: 200px;
+        padding-left: 60px;
+    }
+
+    .logo .header {
+        letter-spacing: 10px;
+    }
+
+    ul {
+        padding-top: 70px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .divider {
+        padding: 10px 0;
+    }
+
+    main {
+        width: 70%;
+        max-width: 400px;
+        padding-right: 60px;
+    }
+
+    .videos iframe, .events picture img {
+        height: 200px;
+    }
+
+    .content-text {
+        margin: 10px 0 20px;
+    }
+
+    .content-text p {
+        margin: 5px 0;
+    }
+
+    .image-full-view img{
+        top: 0;
+    }
+
+    .partners picture img {
+        height: 200px;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    main {
+        max-width: 1000px;
+    }
+
+    .videos iframe, .events picture img {
+        height: 500px;
+    }
+
+    .photo {
+        max-width: 30%;
+        margin: 1%;
+    }
+
+    .bio-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bio-content picture {
+        max-width: 50%;
+    }
+    
+    .bio-content .content-text {
+        max-width: 40%;
+        padding: 5% 0;
+        margin-left: 10%;
+        /*Work out a way to display bio and image side by side*/
+    }
 }
 
 .hidden {
