@@ -130,18 +130,18 @@ const getVideos = () => {
 }
 
 const getPhotos = () => {
+    let html = ''
+
     $(`.photos`).empty()
 
-    let i=1
-    const pictureInterval = setInterval(() => {
-        $(`.photos`).append(`<a onClick='openImage("${i}")'><picture><img src='./media/cover-${i}.jpg' class='photo' alt='blizzy performance background image'></picture></a>`)
-        i++
-        if (i > 9) {clearInterval(pictureInterval)}
-    },50)
+    for (let i=1; i<=9; i++) {
+        html += `<a onClick='openImage("${i}")'><picture><img src='./media/cover-${i}.jpg' class='photo' alt='blizzy performance image'></picture></a>`
+    }
+
+    $('.photos').append(html)
 }
 
 const openImage = (img) => {
-    $('.image-full-view').remove()
     $(`.photos`).append(`
         <div class='image-full-view'>
             <picture><img src='./media/cover-${img}.jpg' class='photo' alt='blizzy performance background image'></picture>
