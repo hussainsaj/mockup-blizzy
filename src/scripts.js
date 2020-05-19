@@ -29,6 +29,7 @@ const changeContent = (toShow) => {
     
     if (toShow === 'tour') {getEventDates()}
     else if (toShow === 'videos') {getVideos()}
+    else if (toShow === 'photos') {getPhotos()}
 }
 
 const refreshContent = (html, type, className) => {
@@ -126,4 +127,31 @@ const getVideos = () => {
             refreshContent(html, 'videos', 'video')
         }
     })
+}
+
+const getPhotos = () => {
+    $(`.photos`).empty()
+
+    let i=1
+    const pictureInterval = setInterval(() => {
+        $(`.photos`).append(`<a onClick='openImage("${i}")'><picture><img src='./media/cover-${i}.jpg' class='photo' alt='blizzy performance background image'></picture></a>`)
+        i++
+        if (i > 9) {clearInterval(pictureInterval)}
+    },50)
+}
+
+const openImage = (img) => {
+    $('.image-full-view').remove()
+    $(`.photos`).append(`
+        <div class='image-full-view'>
+            <picture><img src='./media/cover-${img}.jpg' class='photo' alt='blizzy performance background image'></picture>
+            <div class='close-button'>
+                <a onclick='closeImage()'>+</a>
+            </div>
+        </div>`
+    )
+}
+
+const closeImage = () => {
+    $('.image-full-view').remove()
 }
