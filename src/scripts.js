@@ -41,7 +41,18 @@ const refreshContent = (html, type, className) => {
 }
 
 const formatDateTime = (dateTime) => {
+    const date = new Date(dateTime);
 
+    let dd = date.getDate();
+
+    let mm = date.getMonth()+1; 
+
+    let yyyy = date.getFullYear();
+
+    if(dd < 10) {dd = '0' + dd}
+    if(mm < 10) {mm = '0' + mm}
+
+    return `${dd}/${mm}/${yyyy}`
 }
 
 const getEventDates = () => {
@@ -81,7 +92,7 @@ const getEventDates = () => {
                                     ${picture}
                                     <div class='content-text'>
                                         <p>${result['name']}</p>
-                                        <p class='greyed'>${result["dates"]["start"]["localDate"]}</p>
+                                        <p class='greyed'>${formatDateTime(result["dates"]["start"]["localDate"])}</p>
                                         <p class='greyed'>${result._embedded["venues"][0]["name"]} - ${result._embedded["venues"][0]['city']['name']}, ${result._embedded["venues"][0]['country']['countryCode']}</p>
                                     </div>
                                 </a>
@@ -116,7 +127,7 @@ const getVideos = () => {
                             <iframe class="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/${item['id']['videoId']}" frameborder="0"></iframe>
                             <div class='content-text'>
                                 <p>${item['snippet']['title']}</p>
-                                <p class='greyed'>${item['snippet']['publishTime']}</p>
+                                <p class='greyed'>${formatDateTime(item['snippet']['publishTime'])}</p>
                                 <p class='greyed'>${item['snippet']['description']}</p>
                             </div>
                         </div>`
