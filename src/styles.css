@@ -39,7 +39,7 @@ a {
     color: black;
 }
 
-.cover-content .button, .close-button, .sidemenu ul li {
+.cover-content .button, .close-button, .sidemenu ul li, .photos .photo, .logo {
     cursor: pointer;
 }
 
@@ -173,14 +173,30 @@ a {
     left: 50%;
     transform: translate(-50%,0);
     cursor: pointer;
+    transition: 0.2s;
 }
 
-.cover-content .shortcuts {
+.button:hover {
+    color: black;
+    background-color: white;
+}
+
+.shortcuts {
     bottom: 5%;
+    transition: 0.2s;
 }
 
 .shortcuts a {
     padding: 0 5px;
+    transition: 0.2s;
+}
+
+.shortcuts:hover a {
+    opacity: 0.6;
+}
+
+.shortcuts a:hover {
+    opacity: 1;
 }
 
 .image-full-view {
@@ -277,6 +293,14 @@ a {
 
     li {
         margin: 10px 0;
+    }
+
+    li a {
+        transition: 0.2s;
+    }
+
+    li a:hover {
+        opacity: 1;
     }
 
     .divider {

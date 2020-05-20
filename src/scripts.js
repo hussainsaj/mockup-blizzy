@@ -1,5 +1,5 @@
 setInterval(() => {
-    document.getElementsByClassName('cover-img')[0].src = './media/cover-' + Math.floor(1 + (Math.random() * 9)) + '.jpg'
+    $(".cover-img").attr("src",`./media/cover-${Math.floor(1 + (Math.random() * 9))}.jpg`);
 },5000)
 
 let nav = true
@@ -12,20 +12,23 @@ const toggleNav = () => {
             height: '0'
         }
     }
-    document.getElementsByClassName('sidemenu')[0].style.height = navValues[nav].height
+
+    $(`.sidemenu`).height(navValues[nav].height)
 
     nav = !nav
 }
 
 const changeContent = (toShow) => {
-    const content = document.getElementsByClassName('content')
-    document.getElementsByClassName('cover')[0].style.display = 'none'
-    for (let i=0; i<content.length; i++) {
-        content[i].style.display = 'none'
-    }
-    document.getElementsByClassName(toShow)[0].style.display = 'block'
+    $(`.content`).hide()
+    $(`.cover`).hide()
+    $(`.${toShow}`).show()
+
+
     nav = false
     toggleNav()
+
+    $(`.sidemenu-link`).removeClass('greyed')
+    $(`.sidemenu-${toShow}`).addClass('greyed')
     
     if (toShow === 'tour') {getEventDates()}
     else if (toShow === 'videos') {getVideos()}
